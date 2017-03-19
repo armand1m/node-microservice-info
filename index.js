@@ -2,7 +2,7 @@ const os = require('os');
 const ip = require('ip');
 const getTaggedPrefix = require('./get-tagged-prefix');
 
-process.env.PREFIXES = process.env.PREFIXES || ""
+process.env.PREFIXES = process.env.PREFIXES || '';
 
 class Info {
 	static get ip() {
@@ -34,10 +34,10 @@ class Info {
 	}
 
 	static get uri() {
-		let protocol = "http"
+		let protocol = 'http';
 
 		if (Info.port === 443) {
-			protocol =  "https"
+			protocol = 'https';
 		}
 
 		return `${protocol}://${Info.ip}:${Info.port}`;
