@@ -5,8 +5,6 @@ cache:
 node_js:
   - '7'
   - '6'
-before_script:
-  - npm install
 script:
   - npm run lint:test:cover
 after_success:

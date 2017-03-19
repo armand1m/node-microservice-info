@@ -3,7 +3,7 @@
   "version": "0.0.0-development",
   "description": "Returns info relevant to use a service in armand1m/microservices project.",
   "license": "MIT",
-  "repository": "armand1m/microservice-info",
+  "repository": "armand1m/node-microservice-info",
   "author": {
     "name": "Armando Magalhães",
     "email": "armando.mag95@gmail.com",
