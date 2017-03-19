@@ -1,0 +1,43 @@
+{
+  "name": "microservice-info",
+  "version": "0.0.0",
+  "description": "Returns info relevant to use a service in armand1m/microservices project.",
+  "license": "MIT",
+  "repository": "armand1m/microservice-info",
+  "author": {
+    "name": "Armando Magalhães",
+    "email": "armando.mag95@gmail.com",
+    "url": "armand1m.herokuapp.com"
+  },
+  "engines": {
+    "node": ">=4"
+  },
+  "scripts": {
+    "test": "ava",
+    "test:cover": "nyc ava",
+    "lint:test:cover": "xo && nyc ava",
+    "lint": "xo",
+    "lint:fix": "xo --fix"
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    ""
+  ],
+  "dependencies": {
+    "ip": "^1.1.5"
+  },
+  "devDependencies": {
+    "ava": "^0.17.0",
+    "coveralls": "^2.11.12",
+    "nyc": "^10.0.0",
+    "xo": "^0.17.0"
+  },
+  "nyc": {
+    "reporter": [
+      "lcov",
+      "text"
+    ]
+  }
+}
