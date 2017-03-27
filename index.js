@@ -48,7 +48,7 @@ class Info {
 			return {
 				http: `${Info.uri}${process.env.CONSUL_HEALTHCHECK_HTTP_URI}`,
 				interval: '10s'
-			}
+			};
 		}
 
 		return {
