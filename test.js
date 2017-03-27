@@ -74,6 +74,19 @@ test('Info.check as https', t => {
 	t.deepEqual(Info.check, expected, 'Info.check returns Healthcheck object as https.');
 });
 
+test('Info.check when CONSUL_HEALTHCHECK_HTTP_URI is set', t => {
+	process.env.SERVICE_NAME = 'test';
+	process.env.SERVICE_PORT = '80';
+	process.env.CONSUL_HEALTHCHECK_HTTP_URI = '/';
+
+	let expected = {
+		http: `http://${ip.address()}:${process.env.SERVICE_PORT}/`,
+		interval: '10s'
+	};
+
+	t.deepEqual(Info.check, expected, 'Info.check returns Healthcheck to point to server root url.');
+})
+
 test('Info.consul', t => {
 	process.env.CONSUL_HOST = 'consul';
 	process.env.CONSUL_PORT = '8500';
