@@ -1,6 +1,6 @@
 {
   "name": "microservice-info",
-  "version": "0.0.0-development",
+  "version": "1.1.2",
   "description": "Returns info relevant to use a service in armand1m/microservices project.",
   "license": "MIT",
   "repository": "armand1m/node-microservice-info",
