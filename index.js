@@ -44,8 +44,15 @@ class Info {
 	}
 
 	static get check() {
+		if (process.env.CONSUL_HEALTHCHECK_HTTP_URI) {
+			return {
+				http: `${Info.uri}${process.env.CONSUL_HEALTHCHECK_PATH}`,
+				interval: '10s'
+			}
+		}
+
 		return {
-			http: `${Info.uri}/${Info.name}/health`,
+			http: `${Info.uri}/${Info.name}`,
 			interval: '10s'
 		};
 	}
